@@ -58,6 +58,28 @@ A custom integration to connect your Zodiac iAqualink **Exo** pool system to Hom
 
 ---
 
+## Error codes
+
+The **Error Code** diagnostic sensor reports the numeric code sent by the
+Zodiac device. **Error Code Text** translates known values; codes that are
+not documented in the integration are displayed as **Unknown Error**.
+
+| Code | Description |
+| --- | --- |
+| 0 | No Error |
+| 1 | No Flow (confirmed on Zodiac eXO iQ 10 by stopping and restarting the circulation pump) |
+| 3 | Low Conductivity |
+| 4 | Check Output |
+| 6 | Low Water Temp |
+| 7 | pH Dosing Stop |
+| 9 | ORP Stop |
+
+Code 1 is a fault reported by the chlorinator. The Error State diagnostic
+sensor also indicates a problem while the fault is active. Do not block a
+running pump to test flow alarms; use a manufacturer-approved procedure.
+
+---
+
 ## Features
 
 - **Automatic Authentication** – Secure login to the iAqualink API using your email and password.
