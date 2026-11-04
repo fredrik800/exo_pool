@@ -263,7 +263,7 @@ class ErrorCodeTextSensor(CoordinatorEntity, SensorEntity):
             .get("swc_0", {})
             .get("error_code")
         )
-        return ERROR_CODES.get(int(code) if code is not None else 0, "No Error")
+        return ERROR_CODES.get(int(code) if code is not None else 0, "Unknown Error")
 
 
 class WifiRssiSensor(CoordinatorEntity, SensorEntity):
